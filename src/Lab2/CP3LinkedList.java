@@ -6,6 +6,7 @@ public class CP3LinkedList <E> {
     private class Node {
         public E data;
         public Node next;
+
     }
 
     private Node first;
@@ -41,6 +42,43 @@ public class CP3LinkedList <E> {
            else return false;
     }*/
         return first == null;
+    }
+
+    public void print(){
+        Node current = first;
+
+        while(current != null){
+            System.out.println(current.data);
+            current = current.next;
+        }
+
+    }
+    public int size(){
+        Node current = first;
+        int currentSize = 0;
+
+        while(current != null){
+           currentSize++;
+
+          current = current.next;
+        }
+
+        return currentSize;
+
+    }
+
+    public boolean containsElement(E element){
+        Node current = first;
+
+        while(current != null){
+            if(current.data.equals(element))
+                return true;
+
+            current = current.next;
+
+        }
+        return false;
+
     }
 
 }
