@@ -7,12 +7,15 @@ public class CP3LinkedList <E> {
         public E data;
         public Node next;
 
+
     }
 
     private Node first;
+    private Node last;
 
     public CP3LinkedList() {
         first = null;
+        last = null;
     }
 
     public E getFirst() {
@@ -29,12 +32,26 @@ public class CP3LinkedList <E> {
         first = newNode;
 
     }
+    public void addLast(E element) {
+
+        Node newNode = new Node();
+        newNode.data = element;
+        newNode.next = null;
+        if(last != null)
+            last.next = newNode;
+        if(first == null)
+            first = newNode;
+
+        last = newNode;
+    }
 
     public void removeFirst() {
         if (first == null) {
             throw new NoSuchElementException();
         }
         first = first.next;
+        if(first == null)
+            last = null;
     }
 
     public boolean isEmpty() {

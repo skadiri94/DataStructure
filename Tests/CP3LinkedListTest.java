@@ -1,12 +1,11 @@
-package Lab2;
-
+import Lab2.CP3LinkedList;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CP3LinkedListTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getFirst() {
 
         CP3LinkedList<String> list = new CP3LinkedList();
@@ -18,11 +17,11 @@ class CP3LinkedListTest {
         assertEquals("Bill", s);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void addFirst() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void removeFirst() {
         CP3LinkedList<String> list = new CP3LinkedList();
         list.addFirst("Anne");
@@ -34,7 +33,7 @@ class CP3LinkedListTest {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void isEmpty() {
     }
 
