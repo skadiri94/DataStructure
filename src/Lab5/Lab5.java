@@ -16,7 +16,7 @@ public class Lab5 {
 
         //populate both lists with contents of a data file
         try {   // The name of the file which we will read from
-            String filename = "words_alpha.txt"; //file in project folder
+                   String filename = "words_alpha.txt"; //file in project folder
             //String filename = "C:\\Users\\t00012345\\Desktop\\words_alpha.txt"; //can have file in any folder
 
             // Prepare to read from the file, using a Scanner object
