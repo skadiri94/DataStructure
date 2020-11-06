@@ -28,7 +28,10 @@ public class BinarySearchTree <E extends Comparable> {
 
     private void insertSub(Node newNode, Node node) {
         int result = newNode.data.compareTo(node.data);
-        if(result >= 0){
+        if(result == 0){
+
+        }
+        else if(result > 0){
             //go right
             if(node.right == null){
                 node.right = newNode;
@@ -43,6 +46,37 @@ public class BinarySearchTree <E extends Comparable> {
             }else {
                 insertSub(newNode, node.left);
             }
+        }
+    }
+
+    public boolean contains(E element){
+        boolean found = false;
+
+        Node current = root;
+
+        while(current != null && !found){
+           int result = element.compareTo(current.data);
+           if (result == 0)
+               found = true;
+           else if (result < 0)
+               current = current.left;
+           else
+               current = current.right;
+        }
+
+        return found;
+
+    }
+public void print() {
+        if(root != null )
+            printSub(root);
+}
+
+    public void printSub(Node node){
+        if(node != null){
+            printSub(node.left);
+            System.out.println(node.data);
+            printSub(node.right);
         }
     }
 
