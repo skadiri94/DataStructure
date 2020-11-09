@@ -4,12 +4,12 @@ public class BinarySearchTreeDriver {
     public static void main(String[] args) {
         BinarySearchTree<String> tree = new BinarySearchTree();
 
-        tree.insert("Juliet");
-        tree.insert("Tom");
-        tree.insert("Romeo");
-        tree.insert("Diana");
-        tree.insert("Harry");
-        tree.print();
+        tree.insert("Ben");
+        tree.insert("Alan");
+        tree.insert("Amay");
+        tree.insert("Kay");
+        tree.insert("Bill");
+        tree.printPreOrderIteratively();
 
     }
 }
